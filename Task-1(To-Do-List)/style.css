@@ -1,0 +1,140 @@
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #9b59b6;
+}
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #efc4f5; /* Pastel purple */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+/* Container styling */
+.todo-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* To-Do List Styling */
+.todo-list {
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+/* Filters Section Styling */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.filters button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #D8B7DD;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 32%;
+}
+.filters button:hover {
+    background-color: #9c79b5;
+}
+/* Individual To-Do Item Styling */
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+.todo-item.completed {
+    background-color: #ffdbdb; /* Pastel pink */
+}
+/* Only strike through the text when task is completed */
+.todo-item.completed span {
+    text-decoration: line-through; /* Strike-through effect for the text */
+    color: #888; /* Optional: Change the text color to gray */
+}
+/* Style for Edit and Delete Buttons */
+.todo-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.2s ease;
+}
+.todo-item button i {
+    font-size: 18px;
+    color: #555;
+}
+/* Hover effects for Edit and Delete Icons */
+.todo-item button:hover {
+    background-color: #e2e2e2;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    color: #9c79b5; /* Change color to a professional purple when hovered */
+}
+.todo-item button:active {
+    background-color: #d0d0d0;
+}
+/* Add Task Section Styling */
+.add-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.add-task input {
+    width: 70%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.add-task button {
+    padding: 8px 16px;
+    background-color: #9b59b6;; /* Dark aesthetic purple */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.add-task button:hover {
+    background-color: #9c79b5; /* Change to pastel purple on hover */
+}
+.add-task button:active {
+    background-color: #D8B7DD; /* Change to pastel purple when clicked */
+    transform: scale(0.98); /* Subtle shrink effect */
+}
+/* Responsive Styling */
+@media (max-width: 500px) {
+    .todo-container {
+        width: 90%;
+    }   
+    .add-task input {
+        width: 60%;
+    }
+    .filters button {
+        width: 30%;
+    }
+}
